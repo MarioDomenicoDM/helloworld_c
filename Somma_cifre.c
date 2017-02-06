@@ -3,9 +3,9 @@
 int main() {
 
 	int n;
-	int a;
-	int b;
 	int c;
+	int d;
+	int u;
 	int somma = 0;
 
 	printf("Inserisci un numero di tre cifre \n");
@@ -13,11 +13,13 @@ int main() {
 
 	if(n > 99 && n<1000){        
 
-		a = n/100;
-		b = (n-(a*100))/10;
-		c = n-(a*100)-(b*10);
+	   u = n%10;     
+       n = n/10;
+      d = n%10;
+       n = n/10;
+      c = n%10;
 
-		somma = a+b+c;
+		somma = c+d+u;
 		
 		printf("la somma e' %d\n", somma);
 
